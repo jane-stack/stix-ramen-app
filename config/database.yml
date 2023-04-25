@@ -81,6 +81,4 @@ test:
 #
 production:
   <<: *default
-  database: stix_ramen_app_production
-  username: stix_ramen_app
-  password: <%= ENV["STIX_RAMEN_APP_DATABASE_PASSWORD"] %>
+  url: <%= ENV['DATABASE_URL'] %>
