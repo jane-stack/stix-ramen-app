@@ -5,6 +5,7 @@ import Home from "../pages/Home";
 import Menu from "../pages/Menu";
 import Review from "../pages/Review";
 import LoginPage from "./LoginPage";
+import Cart from "../pages/Cart";
 
 function App() {
 
@@ -13,6 +14,9 @@ function App() {
     <Navbar />
       <div className="App">
         <Switch>
+        <Route path="/cart">
+            <Cart />
+          </Route>
           <Route path="/review">
             <Review />
           </Route>

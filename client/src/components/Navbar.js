@@ -18,6 +18,7 @@ function Navbar() {
                 <NavLink to="/menu" exact style={linkStyle}>Menu</NavLink>
                 <NavLink to="/review" exact style={linkStyle}>Reviews</NavLink>
                 <NavLink to="/login" exact style={linkStyle}>Log In</NavLink>
+                <NavLink to="/cart" exact style={linkStyle}>Cart</NavLink>
         </div>
     )
 }
