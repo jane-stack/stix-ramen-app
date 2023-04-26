@@ -1,11 +1,9 @@
 function Footer() {
     return (
         <div className="footer">
-            <h7>(719) 725-3249</h7>
-            <br/>
-            <h7>1818 N Newberry Cir, Derby, KS 67037</h7>
-            <br/>
-            <h7>StixRamen@gmail.com</h7>
+            <h5>(719) 725-3249</h5>
+            <h5>1818 N Newberry Cir, Derby, KS 67037</h5>
+            <h5>stixramen@gmail.com</h5>
         </div>
     )
 }

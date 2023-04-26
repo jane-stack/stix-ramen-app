@@ -1,7 +1,25 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import ReviewCard from "../components/ReviewCard";
 
 function Review() {
-    const [review, setReview] = useState("");
+    const [content, setContent] = useState("");
+    const [reviewList, setReviewList] = useState([]);
+
+    useEffect(() => {
+        fetch('/reviews')
+        .then(resp => resp.json())
+        .then(setReviewList);
+    }, []);
+
+    const renderReviewList = reviewList.map(review => {
+        return (
+            <ReviewCard
+                key={review.id}
+                description={review.content}
+                username={review.user_id}
+            />
+        )
+    })
     
     function handleSubmit(e) {
         e.preventDefault(e);
@@ -12,9 +30,10 @@ function Review() {
         <form className="post-form" onSubmit={handleSubmit}>
             <h3>Review Us!</h3>
             <p>Create an account with Stix to post a review and enjoy varies discounts!</p>
-            <textarea className="review-box" type="textbox" name="review" onChange={(e) => setReview(e.target.value)} value={review} />
+            <textarea className="review-box" type="textbox" name="content" onChange={(e) => setContent(e.target.value)} value={content} />
             <br />
             <button type="submit" className="contact-btn">POST</button>
+            {renderReviewList}
         </form>
     )
 }
