@@ -1,6 +1,6 @@
 function Menu() {
     return (
-        <div>Hello from the Menu page!</div>
+        <div>Check out our menu! Beat the line by ordering for pickup.</div>
     )
 }
 export default Menu;
