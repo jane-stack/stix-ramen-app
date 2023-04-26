@@ -4,8 +4,9 @@ import Navbar from "./Navbar";
 import Home from "../pages/Home";
 import Menu from "../pages/Menu";
 import Review from "../pages/Review";
-import LoginPage from "./LoginPage";
+import LoginPage from "../pages/LoginPage";
 import Cart from "../pages/Cart";
+import Footer from "./Footer";
 
 function App() {
 
@@ -29,11 +30,10 @@ function App() {
           <Route path="/">
             <Home />
             <h4>The most savory ramen you'll ever taste. A taste hard to forget!</h4>
-            <h4>(719) 725-3249</h4>
-            <h4>1818 N Newberry Cir, Derby, KS 67037</h4>
           </Route>
         </Switch>
       </div>
+      <Footer />
     </BrowserRouter>
   );
 }

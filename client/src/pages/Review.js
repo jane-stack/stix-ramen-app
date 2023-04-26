@@ -11,6 +11,7 @@ function Review() {
     return (
         <form className="post-form" onSubmit={handleSubmit}>
             <h3>Review Us!</h3>
+            <p>Create an account with Stix to post a review and enjoy varies discounts!</p>
             <textarea className="review-box" type="textbox" name="review" onChange={(e) => setReview(e.target.value)} value={review} />
             <br />
             <button type="submit" className="contact-btn">POST</button>
