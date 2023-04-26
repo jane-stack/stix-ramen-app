@@ -41,6 +41,7 @@ function SignupForm() {
             onChange={(e) => setPasswordConfirmation(e.target.value)}
             />
             <br/>
+            <button type="submit">Sign Me Up</button>
         </form>
     )
 }

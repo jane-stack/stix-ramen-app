@@ -5,15 +5,15 @@ const linkStyle = {
     width: "auto",
     padding: "12px",
     margin: "0 6px 6px",
-    background: "white",
+    background: "black",
     textDecoration: "none",
-    color: "black",
+    color: "white",
 };
 
 function Navbar() {
     return (
         <div className="navbar">
-            <h1>Stix Ramen</h1>
+            <h1 className="title">Stix Ramen</h1>
                 <NavLink to="/" exact style={linkStyle}>Home</NavLink>
                 <NavLink to="/menu" exact style={linkStyle}>Menu</NavLink>
                 <NavLink to="/review" exact style={linkStyle}>Reviews</NavLink>
