@@ -9,7 +9,7 @@ function SignupForm() {
     return (
         <form className="login-form">
             <h3>Become a Stix Member</h3>
-            <lable htmlFor="username">Username </lable>
+            Username &nbsp;
             <input
             type="text"
             name="username"
@@ -17,7 +17,7 @@ function SignupForm() {
             onChange={(e) => setUsername(e.target.value)}
             />
             <br/>
-            <lable htmlFor="email">email </lable>
+            Email &nbsp;
             <input
             type="text"
             name="email"
@@ -25,7 +25,7 @@ function SignupForm() {
             onChange={(e) => setEmail(e.target.value)}
             />
             <br/>
-            <lable htmlFor="password">Password </lable>
+            Password &nbsp;
             <input
             type="password"
             name="password"
@@ -33,7 +33,7 @@ function SignupForm() {
             onChange={(e) => setPassword(e.target.value)}
             />
             <br/>
-            <lable htmlFor="passwordConfirmation">Confirm Password </lable>
+            Confirm Password &nbsp;
             <input
             type="text"
             name="passwordConfirmation"

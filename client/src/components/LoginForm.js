@@ -12,7 +12,7 @@ function LoginForm() {
     return (
         <form className="login-form" onSubmit={handleSubmit}>
             <h3>Login to Stix</h3>
-            <lable htmlFor="username">Username </lable>
+            Username &nbsp;
             <input
             type="text"
             name="username"
@@ -20,7 +20,7 @@ function LoginForm() {
             onChange={(e) => setUsername(e.target.value)}
             />
             <br/>
-            <lable htmlFor="password">Password </lable>
+            Password &nbsp;
             <input
             type="password"
             name="password"
