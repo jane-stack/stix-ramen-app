@@ -16,7 +16,7 @@ function Review() {
             <ReviewCard
                 key={review.id}
                 description={review.content}
-                username={review.user_id}
+                username={review.user.username}
             />
         )
     })
