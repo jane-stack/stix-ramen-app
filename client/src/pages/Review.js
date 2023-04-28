@@ -17,6 +17,7 @@ function Review() {
                 key={review.id}
                 description={review.content}
                 username={review.user.username}
+                created={review.user.created_at}
             />
         )
     })
