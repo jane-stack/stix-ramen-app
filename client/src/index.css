@@ -86,3 +86,14 @@ body {
   text-align: center;
   padding-top: 300px;
 }
+
+.delete-btn-div {
+  text-align: right;
+  padding-right: 50px;
+}
+
+.delete-btn {
+  background: transparent;
+  border: none;
+  color: red;
+}
