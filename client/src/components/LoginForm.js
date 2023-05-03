@@ -1,12 +1,28 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
+import { UserContext } from "./User";
 
 function LoginForm() {
     const [username, setUsername] = useState("");
     const [password, setPassword] = useState("");
+    const [errors, setErrors] = useState([]);
+    const {login} = useContext(UserContext);
 
     function handleSubmit(e) {
-        e.preventDefault()
-        console.log("HELLO")
+        e.preventDefault();
+        fetch('/login', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ username, password }),
+        })
+        .then(resp => resp.json())
+        .then(user => {
+            if (!user.err) {
+                login(user)
+            } else {
+                const errorlist = user.errors.map(e => <li>{e}</li>)
+                setErrors(errorlist)
+            }
+        })
     }
     
     return (
@@ -28,6 +44,11 @@ function LoginForm() {
             onChange={(e) => setPassword(e.target.value)}
             />
             <br/>
+            {errors.map((err) => (
+                <p key={err} style={{color: "red"}}>
+                    {err}
+                </p>
+             ))}
             <button type="submit">Log Me In</button>
         </form>
     )

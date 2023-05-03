@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 
 // Create context
 const UserContext = React.createContext();
@@ -10,7 +10,8 @@ function UserProvider({children}) {
     useEffect(() => {
         fetch('/me')
         .then(resp => resp.json())
-        .then(data => {setUser(data)
+        .then(data => {
+            setUser(data)
             data.error ? setLoggedIn(false) : setLoggedIn(true) // set loggedIn flag
         })
     }, [])
@@ -38,4 +39,4 @@ function UserProvider({children}) {
     );
 }
 
-export default UserProvider;
+export { UserContext, UserProvider };

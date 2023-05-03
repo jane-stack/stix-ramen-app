@@ -47,6 +47,11 @@ body {
   text-align: center;
 }
 
+.welcome {
+  color: white;
+  text-align: center;
+}
+
 .login-form {
   padding: 150px;
   text-align: right;
