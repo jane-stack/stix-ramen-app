@@ -15,7 +15,7 @@ const linkStyle = {
 
 function Navbar() {
     const {user, logout, loggedIn} = useContext(UserContext);
-    const navigate = useHistory();
+    const history = useHistory();
 
 
     const logoutUser = () => {
@@ -25,7 +25,7 @@ function Navbar() {
         })
         .then(() => {
             logout()
-            navigate('/')
+            history.push('/login')
         })
     }
 
@@ -37,9 +37,7 @@ function Navbar() {
                     <NavLink to="/menu" exact style={linkStyle}>Menu</NavLink>
                     <NavLink to="/review" exact style={linkStyle}>Reviews</NavLink>
                     <NavLink to="/cart" exact style={linkStyle}>Cart</NavLink>
-                    <NavLink to="/login" exact style={linkStyle}>Login</NavLink>
                     <button onClick={logoutUser} exact style={linkStyle}>Logout</button>
-                <h3 className='welcome'>Welcome Back {user.username}!</h3>
             </div>
         )
     } else {

@@ -1,11 +1,13 @@
 import { useContext, useState } from "react";
 import { UserContext } from "./User";
+import { useHistory } from "react-router-dom";
 
 function LoginForm() {
     const [username, setUsername] = useState("");
     const [password, setPassword] = useState("");
     const [errors, setErrors] = useState([]);
     const {login} = useContext(UserContext);
+    const history = useHistory();
 
     function handleSubmit(e) {
         e.preventDefault();
@@ -16,10 +18,13 @@ function LoginForm() {
         })
         .then(resp => resp.json())
         .then(user => {
-            if (!user.err) {
+            if (!user.errors) {
                 login(user)
+                history.push('/')
             } else {
-                const errorlist = user.errors.map(e => <li>{e}</li>)
+                setUsername("")
+                setPassword("")
+                const errorlist = user.errors.map(e => <ul>{e}</ul>)
                 setErrors(errorlist)
             }
         })
