@@ -100,6 +100,11 @@ body {
   padding-top: 300px;
 }
 
+.btn {
+  background: transparent;
+  color: white;
+}
+
 .delete-btn-div {
   text-align: right;
   padding-right: 50px;
