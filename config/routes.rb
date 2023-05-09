@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :menus, except: [:show]
   resources :reviews, except: [:show]
   resources :users, only: [:index]
 

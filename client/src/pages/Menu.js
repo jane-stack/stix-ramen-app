@@ -1,6 +1,19 @@
+import { useEffect, useState } from "react";
+import MenuList from "../components/MenuList";
+
 function Menu() {
+    const [menuList, setMenuList] = useState([]);
+
+    useEffect(() => {
+        fetch('/menus')
+        .then(resp => resp.json())
+        .then(setMenuList)
+    }, [])
+
     return (
-        <div>Check out our menu! Beat the line by ordering for pickup.</div>
+        <main>
+            <MenuList menuList={menuList}/>
+        </main>
     )
 }
 export default Menu;
