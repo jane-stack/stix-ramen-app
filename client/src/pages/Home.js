@@ -6,8 +6,22 @@ function Home() {
 
     if (loggedIn) {
         return (
-            <div className="homepage">
-                <h3 className="welcome">Welcome Back {user.username}!</h3>
+            <div>
+            <div className="welcome">Welcome {user.username}!</div>
+            <br/>
+                <div className="homepage">
+                    <h3>IMAGE GOES HERE</h3>
+                </div>
+            </div>
+        )
+    } else {
+        return (
+            <div>
+            <div className="welcome">Welcome Guest!</div>
+            <br/>
+                <div className="homepage">
+                    <h3>IMAGE GOES HERE</h3>
+                </div>
             </div>
         )
     }

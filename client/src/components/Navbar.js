@@ -14,7 +14,7 @@ const linkStyle = {
 };
 
 function Navbar() {
-    const {user, logout, loggedIn} = useContext(UserContext);
+    const {logout, loggedIn} = useContext(UserContext);
     const history = useHistory();
 
 

@@ -10,7 +10,7 @@ function LoginPage() {
             {showLogin ? (
                 <>
                 <LoginForm />
-                <p className="words">Join Stix membership? &nbsp;
+                <p className="words">Join Stix Community? &nbsp;
                     <button onClick={() => setShowLogin(false)}>Sign Up</button>
                 </p>
                 </>

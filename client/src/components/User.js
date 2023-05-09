@@ -8,11 +8,14 @@ function UserProvider({children}) {
     const [loggedIn, setLoggedIn] = useState(false); //add loggedIn flag
 
     useEffect(() => {
-        fetch('/me')
-        .then(resp => resp.json())
-        .then(data => {
-            setUser(data)
-            data.error ? setLoggedIn(false) : setLoggedIn(true) // set loggedIn flag
+        fetch("/me")
+        .then(resp => {
+            if (resp.ok) {
+                resp.json().then(data => {
+                    setUser(data)
+                    data.error ? setLoggedIn(false) : setLoggedIn(true)
+                })
+            }
         })
     }, [])
 

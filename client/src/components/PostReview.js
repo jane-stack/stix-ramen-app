@@ -12,7 +12,7 @@ function PostReview({content, setContent, onAddReview}) {
             },
             body: JSON.stringify(newReview),
         })
-        .then(resp => resp.json()).then(newReview => console.log(newReview));
+        .then(resp => resp.json()).then(newReview => onAddReview(newReview));
 
         setContent(""); //refresh input fields after submitting form
     }
