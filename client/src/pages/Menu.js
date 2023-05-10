@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import MenuList from "../components/MenuList";
+import Cart from "../pages/Cart"
 
 function Menu() {
     const [menuList, setMenuList] = useState([]);
@@ -11,8 +12,11 @@ function Menu() {
     }, [])
 
     return (
-        <main>
+        <main >
+            <div className="row">
             <MenuList menuList={menuList}/>
+            <Cart/>
+            </div>
         </main>
     )
 }

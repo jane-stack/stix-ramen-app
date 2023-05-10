@@ -36,7 +36,7 @@ function Navbar() {
                     <NavLink to="/" exact style={linkStyle}>Home</NavLink>
                     <NavLink to="/menu" exact style={linkStyle}>Menu</NavLink>
                     <NavLink to="/review" exact style={linkStyle}>Reviews</NavLink>
-                    <NavLink to="/cart" exact style={linkStyle}>Cart</NavLink>
+                    {/* <NavLink to="/cart" exact style={linkStyle}>Cart</NavLink> */}
                     <button onClick={logoutUser} exact style={linkStyle}>Logout</button>
             </div>
         )
@@ -47,7 +47,7 @@ function Navbar() {
                     <NavLink to="/" exact style={linkStyle}>Home</NavLink>
                     <NavLink to="/menu" exact style={linkStyle}>Menu</NavLink>
                     <NavLink to="/review" exact style={linkStyle}>Reviews</NavLink>
-                    <NavLink to="/cart" exact style={linkStyle}>Cart</NavLink>
+                    {/* <NavLink to="/cart" exact style={linkStyle}>Cart</NavLink> */}
                     <NavLink to="/login" exact style={linkStyle}>Login</NavLink>
             </div>
         )

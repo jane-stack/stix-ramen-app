@@ -3,7 +3,7 @@ class CreateMenus < ActiveRecord::Migration[7.0]
     create_table :menus do |t|
       t.string :image
       t.string :name
-      t.integer :price
+      t.decimal :price
 
       t.timestamps
     end

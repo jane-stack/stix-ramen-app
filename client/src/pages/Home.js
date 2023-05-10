@@ -9,19 +9,14 @@ function Home() {
             <div>
             <div className="welcome">Welcome {user.username}!</div>
             <br/>
-                <div className="homepage">
-                    <h3>IMAGE GOES HERE</h3>
-                </div>
+            <img src="https://media.istockphoto.com/id/1307190527/photo/happy-waiter-serving-food-to-group-of-friends-in-a-pub.jpg?s=612x612&w=0&k=20&c=EDqQ0oBcpFGV25p61vWUF5N-6lRJdbmZmQMe5kyuxyA="/>
             </div>
         )
     } else {
         return (
             <div>
-            <div className="welcome">Welcome Guest!</div>
             <br/>
-                <div className="homepage">
-                    <h3>IMAGE GOES HERE</h3>
-                </div>
+            <img src="https://media.istockphoto.com/id/1307190527/photo/happy-waiter-serving-food-to-group-of-friends-in-a-pub.jpg?s=612x612&w=0&k=20&c=EDqQ0oBcpFGV25p61vWUF5N-6lRJdbmZmQMe5kyuxyA="/>
             </div>
         )
     }

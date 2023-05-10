@@ -42,12 +42,6 @@ body {
   max-width: 1200px;
 }
 
-.homepage {
-  background-color: white;
-  padding-bottom: 100px;
-  padding-top: 100px;
-}
-
 .title {
   color: white;
   text-align: center;
@@ -102,7 +96,7 @@ body {
 
 .btn {
   background: transparent;
-  color: white;
+  color: black;
 }
 
 .delete-btn-div {
@@ -118,6 +112,7 @@ body {
 
 .cards {
   list-style: none;
+  color: black;
 }
 
 .card {
@@ -153,4 +148,25 @@ body {
   .card {
     width: calc(20% - 2rem);
   }
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+}
+.col-1 {
+  flex: 1;
+}
+.col-2 {
+  flex: 2;
+}
+.block {
+  background-color: #E0E0E0;
+  padding: 1rem;
+  margin: 0.5rem;
+  border-radius: 0.5rem;
+  color: black;
+}
+.row.center {
+  align-items: center;
 }

@@ -5,7 +5,7 @@ import Home from "../pages/Home";
 import Menu from "../pages/Menu";
 import Review from "../pages/Review";
 import LoginPage from "../pages/LoginPage";
-import Cart from "../pages/Cart";
+// import Cart from "../pages/Cart";
 import Footer from "./Footer";
 
 function App() {
@@ -15,9 +15,9 @@ function App() {
     <Navbar />
       <div className="App">
         <Switch>
-        <Route path="/cart">
+        {/* <Route path="/cart">
             <Cart />
-          </Route>
+          </Route> */}
           <Route path="/review">
             <Review />
           </Route>
