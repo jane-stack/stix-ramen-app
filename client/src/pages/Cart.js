@@ -8,6 +8,10 @@ function Cart({cartItem, onAddItem, onRemoveItem}) {
         alert("Thank you for your order!")
     }
 
+    const onClearCart = () => {
+        console.log("Cart will clear")
+    }
+
     return (
         <aside className="block col-1">
             <h2>Cart Items</h2>
@@ -51,6 +55,7 @@ function Cart({cartItem, onAddItem, onRemoveItem}) {
             <br/>
             <br/>
             <button className="btn" onClick={onCheckOut}>Check Out</button>
+            <button className="btn" onClick={onClearCart}>Clear Cart</button>
         </aside>
     )
 }
