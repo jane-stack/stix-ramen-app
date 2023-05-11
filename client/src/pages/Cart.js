@@ -30,7 +30,7 @@ function Cart({cartItem, onAddItem, onRemoveItem}) {
                 <>
                 <hr/>
                 <div className="row">
-                    <div className="col-2 text-left">Items</div>
+                    <div className="col-2 text-left">Items Total</div>
                     <div className="col-1 text-right">${Number(itemsPrice.toFixed(2))}</div>
                 </div>
                 <div className="row">
