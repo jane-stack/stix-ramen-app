@@ -14,7 +14,7 @@ function Cart({cartItem, onAddItem, onRemoveItem}) {
             <div>{cartItem.length === 0 && <div>Cart is Empty</div>}</div>
             {cartItem.map((item) => (
                 <div key={item.id} className="row">
-                    <div className="col-2">{item.name}</div>
+                    <div className="col-2 text-left">{item.name}</div>
                     <div className="col-2">
                         <button onClick={() => onAddItem(item)} className="add">+</button>
                         <button onClick={() => onRemoveItem(item)} className="remove">-</button>
@@ -30,19 +30,19 @@ function Cart({cartItem, onAddItem, onRemoveItem}) {
                 <>
                 <hr/>
                 <div className="row">
-                    <div className="col-2">Items</div>
+                    <div className="col-2 text-left">Items</div>
                     <div className="col-1 text-right">${Number(itemsPrice.toFixed(2))}</div>
                 </div>
                 <div className="row">
-                    <div className="col-2">Tax</div>
+                    <div className="col-2 text-left">Tax</div>
                     <div className="col-1 text-right">${Number(taxPrice.toFixed(2))}</div>
                 </div>
                 <div className="row">
-                    <div className="col-2">Delivery Fee</div>
+                    <div className="col-2 text-left">Delivery Fee</div>
                     <div className="col-1 text-right">${Number(deliveryPrice.toFixed(2))}</div>
                 </div>
                 <div className="row">
-                    <div className="col-2"><strong>Total</strong></div>
+                    <div className="col-2 text-left"><strong>Total</strong></div>
                     <div className="col-1 text-right"><strong>${Number(totalPrice.toFixed(2))}</strong></div>
                 </div>
                 </>
