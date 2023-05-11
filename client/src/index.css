@@ -97,6 +97,11 @@ body {
 .btn {
   background: transparent;
   color: black;
+  padding: 0.2rem;
+  margin: 0.1rem;
+  border-radius: 0.5rem;
+  width: 100%;
+  cursor: pointer;
 }
 
 .delete-btn-div {
@@ -169,4 +174,29 @@ body {
 }
 .row.center {
   align-items: center;
+}
+
+button.add {
+  background: transparent;
+  border: none;
+  width: 1.5rem;
+  font-weight: bolder;
+}
+
+button.remove {
+  background: transparent;
+  border: none;
+  width: 1.5rem;
+  font-weight: bolder;
+}
+
+button.badge {
+  background-color: yellow;
+  border: none;
+  color: green;
+  width: 1.5rem;
+}
+
+.text-right {
+text-align: right;
 }

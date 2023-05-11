@@ -1,17 +1,17 @@
 
-function MenuCard({image, name, price}) {
-
-    const addToCart = () => {
-        console.log("Added to Cart")
-
-    }
+function MenuCard({item, onAddItem}) {
+    const {image, name, price} = item;
 
     return (
         <li className="card">
+            <div>
             <img src={image} alt={"ramen name"} />
             <h3>{name}</h3>
             <p>${price}</p>
-            <button className="btn" onClick={addToCart}>Add to Cart</button>
+            </div>
+            <div>
+            <button className="btn" onClick={() => onAddItem(item)}>Add to Cart</button>
+            </div>
         </li>
     )
 }

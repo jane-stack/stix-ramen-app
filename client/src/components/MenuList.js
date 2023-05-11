@@ -1,6 +1,6 @@
 import MenuCard from "./MenuCard";
 
-function MenuList({menuList}) {
+function MenuList({menuList, onAddItem, onRemoveItem}) {
 
     const renderMenuItem = menuList.map(item => {
         return (
@@ -8,7 +8,10 @@ function MenuList({menuList}) {
                 key={item.id}
                 image={item.image}
                 name={item.name}
-                price={item.price}  
+                price={item.price} 
+                item={item}
+                onAddItem={onAddItem}
+                onRemoveItem={onRemoveItem}
             />
         )
     })
