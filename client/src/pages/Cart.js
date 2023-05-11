@@ -1,8 +1,12 @@
 function Cart({cartItem, onAddItem, onRemoveItem}) {
     const itemsPrice = cartItem.reduce((a, c) => a + c.price * c.qty, 0);
-    const taxPrice = itemsPrice * 0.14;
+    const taxPrice = itemsPrice * .065;
     const deliveryPrice = 12;
     const totalPrice = itemsPrice + taxPrice + deliveryPrice;
+
+    const onCheckOut = () => {
+        alert("Thank you for your order!")
+    }
 
     return (
         <aside className="block col-1">
@@ -34,7 +38,7 @@ function Cart({cartItem, onAddItem, onRemoveItem}) {
                     <div className="col-1 text-right">${Number(taxPrice.toFixed(2))}</div>
                 </div>
                 <div className="row">
-                    <div className="col-2">Delivery</div>
+                    <div className="col-2">Delivery Fee</div>
                     <div className="col-1 text-right">${Number(deliveryPrice.toFixed(2))}</div>
                 </div>
                 <div className="row">
@@ -43,6 +47,10 @@ function Cart({cartItem, onAddItem, onRemoveItem}) {
                 </div>
                 </>
             )}
+            <br/>
+            <br/>
+            <br/>
+            <button className="btn" onClick={onCheckOut}>Check Out</button>
         </aside>
     )
 }
